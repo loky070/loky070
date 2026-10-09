@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="1000" height="340">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0b3d"/>
+      <stop offset="0.55" stop-color="#3a1478"/>
+      <stop offset="1" stop-color="#ff3d8b"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2b3cff"/>
+      <stop offset="1" stop-color="#20e3b2"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff3a0"/>
+      <stop offset="1" stop-color="#ffd23f"/>
+    </radialGradient>
+    <linearGradient id="pcW" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="0.55" stop-color="#d9d3ff"/><stop offset="1" stop-color="#8a7fd0"/></linearGradient>
+    <linearGradient id="pcD" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6a4fd0"/><stop offset="0.55" stop-color="#3a1478"/><stop offset="1" stop-color="#1a0b3d"/></linearGradient>
+    <linearGradient id="pcP" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff8fbf"/><stop offset="0.55" stop-color="#ff3d8b"/><stop offset="1" stop-color="#a0124f"/></linearGradient>
+    <linearGradient id="pcT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9ff7e0"/><stop offset="0.55" stop-color="#20e3b2"/><stop offset="1" stop-color="#0c7d61"/></linearGradient>
+    <g id="pawn">
+      <rect x="-30" y="-14" width="60" height="14" rx="4"/>
+      <rect x="-24" y="-22" width="48" height="10" rx="3"/>
+      <polygon points="-18,-20 -8,-62 8,-62 18,-20"/>
+      <rect x="-15" y="-70" width="30" height="9" rx="4"/>
+      <circle cx="0" cy="-86" r="17"/>
+    </g>
+    <g id="rook">
+      <rect x="-32" y="-14" width="64" height="14" rx="4"/>
+      <rect x="-26" y="-23" width="52" height="11" rx="3"/>
+      <polygon points="-20,-22 -16,-80 16,-80 20,-22"/>
+      <path d="M-25,-78 V-104 H-15 V-95 H-5 V-104 H5 V-95 H15 V-104 H25 V-78 Z"/>
+    </g>
+    <g id="bishop">
+      <rect x="-30" y="-14" width="60" height="14" rx="4"/>
+      <rect x="-24" y="-22" width="48" height="10" rx="3"/>
+      <polygon points="-16,-20 -7,-70 7,-70 16,-20"/>
+      <rect x="-14" y="-78" width="28" height="9" rx="4"/>
+      <ellipse cx="0" cy="-98" rx="14" ry="21"/>
+      <circle cx="0" cy="-124" r="6"/>
+    </g>
+    <linearGradient id="pcB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a9c0ff"/><stop offset="0.55" stop-color="#4a5cff"/><stop offset="1" stop-color="#18208f"/></linearGradient>
+    <linearGradient id="pcY" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff3a0"/><stop offset="0.55" stop-color="#ffd23f"/><stop offset="1" stop-color="#b8860b"/></linearGradient>
+    <g id="knight">
+      <rect x="-30" y="-14" width="60" height="14" rx="4"/>
+      <rect x="-24" y="-22" width="48" height="10" rx="3"/>
+      <path d="M-18,-22 C-20,-44 -22,-66 -8,-88 L-4,-104 L4,-94 C20,-92 34,-76 32,-60 C31,-54 26,-52 22,-55 C18,-60 12,-62 6,-58 C10,-46 18,-36 18,-22 Z"/>
+    </g>
+    <g id="king">
+      <rect x="-32" y="-14" width="64" height="14" rx="4"/>
+      <rect x="-26" y="-23" width="52" height="11" rx="3"/>
+      <polygon points="-18,-22 -9,-80 9,-80 18,-22"/>
+      <rect x="-16" y="-88" width="32" height="9" rx="4"/>
+      <path d="M-18,-90 L-22,-112 C-10,-120 10,-120 22,-112 L18,-90 Z"/>
+      <rect x="-3.5" y="-140" width="7" height="24" rx="2"/>
+      <rect x="-11" y="-133" width="22" height="7" rx="2"/>
+    </g>
+    <g id="queen">
+      <rect x="-32" y="-14" width="64" height="14" rx="4"/>
+      <rect x="-26" y="-23" width="52" height="11" rx="3"/>
+      <polygon points="-17,-22 -8,-78 8,-78 17,-22"/>
+      <rect x="-15" y="-86" width="30" height="9" rx="4"/>
+      <polygon points="-14,-86 -22,-114 -11,-104 0,-120 11,-104 22,-114 14,-86"/>
+      <circle cx="-22" cy="-116" r="4.5"/><circle cx="0" cy="-123" r="5"/><circle cx="22" cy="-116" r="4.5"/>
+    </g>
+    <clipPath id="floorClip"><rect x="0" y="230" width="1000" height="110"/></clipPath>
+    <style>
+      .t{font-family:'Courier New',Consolas,monospace;font-weight:700}
+      .float1{animation:f 4s ease-in-out infinite}
+      .float2{animation:f 5s ease-in-out infinite reverse}
+      .float3{animation:f 6s ease-in-out infinite}
+      .spin{transform-origin:860px 95px;animation:s 12s linear infinite}
+      .spinTri{transform-origin:245px 62px;animation:s 9s linear infinite reverse}
+      .spinTri2{transform-origin:770px 150px;animation:s 14s linear infinite}
+      .ring{transform-origin:950px 170px;animation:p 3s ease-in-out infinite}
+      .blink{animation:b 1s steps(1) infinite}
+      @keyframes f{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+      @keyframes s{to{transform:rotate(360deg)}}
+      @keyframes p{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+      @keyframes b{50%{opacity:0}}
+    </style>
+  </defs>
+
+  <!-- céu -->
+  <rect width="1000" height="340" fill="url(#sky)"/>
+
+  <!-- sol listrado -->
+  <g>
+    <circle cx="500" cy="230" r="95" fill="url(#sun)"/>
+    <rect x="400" y="190" width="200" height="5" fill="#3a1478"/>
+    <rect x="400" y="205" width="200" height="7" fill="#5a1a8a"/>
+    <rect x="400" y="219" width="200" height="10" fill="#8a2390"/>
+  </g>
+
+  <!-- piso xadrez em perspectiva -->
+  <rect x="0" y="230" width="1000" height="110" fill="#ffd23f"/>
+  <g clip-path="url(#floorClip)" fill="#2b3cff">
+    <polygon points="500,230 420,230 -300,340 -100,340"/>
+    <polygon points="500,230 460,230 100,340 300,340"/>
+    <polygon points="500,230 540,230 700,340 500,340"/>
+    <polygon points="500,230 580,230 1100,340 900,340"/>
+    <polygon points="500,230 620,230 1500,340 1300,340"/>
+  </g>
+  <g clip-path="url(#floorClip)" fill="#1a0b3d" opacity="0.35">
+    <rect x="0" y="236" width="1000" height="6"/>
+    <rect x="0" y="252" width="1000" height="10"/>
+    <rect x="0" y="278" width="1000" height="16"/>
+    <rect x="0" y="316" width="1000" height="24"/>
+  </g>
+
+  <!-- pirâmide low-poly apoiada no piso -->
+  <g>
+    <polygon points="900,150 860,240 905,250" fill="#ff3d8b"/>
+    <polygon points="900,150 905,250 950,236" fill="#2b3cff"/>
+    <polygon points="900,150 860,240 950,236" fill="none" stroke="#fff" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- pirâmide pequena à esquerda -->
+  <g>
+    <polygon points="60,195 35,245 62,250" fill="#20e3b2"/>
+    <polygon points="60,195 62,250 88,243" fill="#e8322c"/>
+  </g>
+
+  <!-- peças de xadrez no piso -->
+  <g>
+    <ellipse cx="160" cy="324" rx="34" ry="7" fill="#1a0b3d" opacity="0.45"/>
+    <use href="#rook" transform="translate(160,322) scale(0.85)" fill="url(#pcW)"/>
+    <ellipse cx="262" cy="300" rx="20" ry="5" fill="#1a0b3d" opacity="0.45"/>
+    <use href="#pawn" transform="translate(262,299) scale(0.6)" fill="url(#pcD)"/>
+    <ellipse cx="770" cy="318" rx="28" ry="6" fill="#1a0b3d" opacity="0.45"/>
+    <use href="#bishop" transform="translate(770,316) scale(0.72)" fill="url(#pcP)"/>
+    <ellipse cx="660" cy="270" rx="15" ry="4" fill="#1a0b3d" opacity="0.45"/>
+    <use href="#knight" transform="translate(660,269) scale(0.46)" fill="url(#pcT)"/>
+    <ellipse cx="362" cy="266" rx="14" ry="3.5" fill="#1a0b3d" opacity="0.45"/>
+    <use href="#queen" transform="translate(362,265) scale(0.42)" fill="url(#pcB)"/>
+    <ellipse cx="556" cy="296" rx="18" ry="4.5" fill="#1a0b3d" opacity="0.45"/>
+    <use href="#king" transform="translate(556,295) scale(0.5)" fill="url(#pcY)"/>
+  </g>
+
+  <!-- cubo low-poly -->
+  <g class="float1">
+    <polygon points="110,70 150,50 190,70 150,90" fill="#20e3b2"/>
+    <polygon points="110,70 150,90 150,135 110,115" fill="#2b3cff"/>
+    <polygon points="190,70 150,90 150,135 190,115" fill="#ff3d8b"/>
+  </g>
+
+  <!-- triângulo wireframe girando -->
+  <g class="spinTri">
+    <polygon points="245,34 270,78 220,78" fill="none" stroke="#20e3b2" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <!-- triângulo sólido girando -->
+  <g class="spinTri2">
+    <polygon points="770,132 786,160 754,160" fill="#ffd23f"/>
+  </g>
+
+  <!-- losango -->
+  <g class="spin">
+    <polygon points="860,55 900,95 860,135 820,95" fill="none" stroke="#ffd23f" stroke-width="5"/>
+    <polygon points="860,75 880,95 860,115 840,95" fill="#e8322c"/>
+  </g>
+
+  <!-- anel pulsando -->
+  <g class="ring">
+    <circle cx="950" cy="170" r="12" fill="none" stroke="#fff" stroke-width="3"/>
+  </g>
+
+  <!-- zigue-zague -->
+  <g class="float3">
+    <polyline points="200,170 215,155 230,170 245,155 260,170 275,155" fill="none" stroke="#ff3d8b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- meia-lua e pontos -->
+  <g class="float2">
+    <path d="M 720 60 a 18 18 0 0 1 36 0 z" fill="#20e3b2"/>
+    <circle cx="240" cy="205" r="14" fill="#ffd23f"/>
+    <circle cx="800" cy="205" r="9" fill="#20e3b2"/>
+    <circle cx="40" cy="140" r="6" fill="#fff"/>
+  </g>
+
+  <!-- estrelas/pixels -->
+  <g fill="#fff" opacity="0.8">
+    <rect x="330" y="40" width="3" height="3"/><rect x="640" y="30" width="3" height="3"/>
+    <rect x="720" y="120" width="2" height="2"/><rect x="280" y="120" width="2" height="2"/>
+    <rect x="940" y="40" width="3" height="3"/><rect x="40" y="30" width="2" height="2"/>
+    <rect x="985" y="110" width="2" height="2"/><rect x="200" y="20" width="2" height="2"/>
+  </g>
+
+  <!-- janela retrô -->
+  <g>
+    <rect x="304" y="44" width="400" height="160" fill="#000" opacity="0.35"/>
+    <rect x="296" y="36" width="400" height="160" fill="#c8c8d8" stroke="#fff" stroke-width="2"/>
+    <rect x="300" y="40" width="392" height="24" fill="url(#bar)"/>
+    <text x="310" y="57" class="t" font-size="14" fill="#fff">loky070.exe</text>
+    <g>
+      <rect x="626" y="44" width="18" height="16" fill="#c8c8d8" stroke="#fff"/>
+      <rect x="648" y="44" width="18" height="16" fill="#c8c8d8" stroke="#fff"/>
+      <rect x="670" y="44" width="18" height="16" fill="#c8c8d8" stroke="#fff"/>
+      <text x="674" y="57" class="t" font-size="13" fill="#1a0b3d">x</text>
+      <rect x="652" y="48" width="10" height="8" fill="none" stroke="#1a0b3d" stroke-width="2"/>
+      <rect x="630" y="54" width="10" height="2" fill="#1a0b3d"/>
+    </g>
+    <rect x="308" y="72" width="376" height="114" fill="#1a0b3d"/>
+    <text x="322" y="106" class="t" font-size="25" fill="#ffd23f">Hello World, I'm Luick</text>
+    <text x="324" y="138" class="t" font-size="16" fill="#20e3b2">&gt; front-end dev · software eng @ UNDB</text>
+    <text x="324" y="162" class="t" font-size="16" fill="#ff3d8b">&gt; code, design &amp; weird ideas</text>
+    <rect x="324" y="170" width="10" height="4" fill="#fff" class="blink"/>
+  </g>
+</svg>
